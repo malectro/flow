@@ -9,3 +9,9 @@ function foo(strs: Iterable<string>): void {
 var m: Map<string, number> = new Map();
 
 foo(m.keys());
+
+const has10: boolean = m.keys().map(
+  (key: string) => parseInt(key)
+).some(
+  (key: number) => key === 10
+);
